@@ -2,7 +2,7 @@ import psycopg2
 import matplotlib.pyplot as plt
 
 username = 'postgres'
-password = '****'
+password = 'lila****'
 database = 'channels'
 host = 'localhost'
 port = '5432'
@@ -38,6 +38,7 @@ with conn:
         x.append(row[0])
         y.append(row[1])
     plt.bar(x, y, width=0.1, alpha=0.6, color='yellow', edgecolor="k", linewidth=2)
+    plt.ylabel('Number of channels')
     plt.title('Number of channels in each country')
     plt.show()
 
@@ -58,5 +59,6 @@ with conn:
         y.append(row[1])
         x.append(row[0])
     plt.bar(x, y, color='yellow', edgecolor="k")
+    plt.ylabel('Number of views')
     plt.title('Channel views that are greater than the average number of views of all channels')
     plt.show()
