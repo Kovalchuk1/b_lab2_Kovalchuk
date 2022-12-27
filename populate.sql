@@ -1,7 +1,3 @@
-CREATE TABLE country(
-  id_country INT NOT NULL,
-  country_name varchar(50) NOT NULL
-);
 
 insert into country(id_country, country_name) values
 (1, 'India'),
