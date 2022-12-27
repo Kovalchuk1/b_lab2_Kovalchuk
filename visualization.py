@@ -2,7 +2,7 @@ import psycopg2
 import matplotlib.pyplot as plt
 
 username = 'postgres'
-password = 'lila****'
+password = '****'
 database = 'channels'
 host = 'localhost'
 port = '5432'
@@ -57,7 +57,7 @@ with conn:
     cur.execute(query_3)
     for row in cur:
         y.append(row[1])
-        x.append(row[0])
+        x.append(row[0].strip())
     plt.bar(x, y, color='yellow', edgecolor="k")
     plt.ylabel('Number of views')
     plt.title('Channel views that are greater than the average number of views of all channels')
